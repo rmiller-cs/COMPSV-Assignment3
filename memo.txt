@@ -1,0 +1,19 @@
+Design Memo
+
+- Why is a stack the right choice for undo/redo?
+A stack replicates the function required for an undo/redo system. Both undo and redo are Last In First Out, which is the same as a stack.
+This allows a stack to represent the undo/redo lists, 
+since no additional functionality needs to be added for it to work in the undo/redo file.
+
+- Why is a queue better suited for the help desk?
+Similar to the previous choice, a queue matches the functionality of a help desk.
+A help desk (ideally) serves the first person in line, creating a First In First Out system.
+This system is reflected in how a queue works, with data added to the end and removed from the beginning.
+This means a queue has the required functions by default without any additions.
+
+- How do your implementations differ from Python’s built-in lists?
+These implementations differ from Python's built-in lists in how they are manipulated.
+Python's lists can be manipulated in many different ways, including changing specific elements and altering each element one by one.
+These stack and queue implementations can only be interacted with in a few set ways.
+For example, the only way to change the elements of a queue is through enqueue and dequeue.
+These limitations create a clear purpose for these structures and increase their efficiency by doing so.
